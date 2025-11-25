@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vender Vehículo - vendervehiculo.es</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Formulario online para vender tu coche de forma rápida y sencilla. Rellena los datos y recibe una valoración.">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f3f3f3;}
+        header, footer { background: #222; color: #fff; padding: 20px; text-align: center;}
+        main { max-width: 600px; margin: 30px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px #ccc; border-radius: 8px;}
+        form section { margin-bottom: 25px;}
+        label { display: block; margin: 10px 0 6px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box;}
+        button { background: #218838; color: #fff; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; margin-top: 10px;}
+        button:hover { background: #17632f;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>vendervehiculo.es</h1>
+        <p>Vende tu coche fácil, rápido y seguro</p>
+    </header>
+
+    <main>
+        <h2>Formulario para vender tu vehículo</h2>
+        <form action="https://formspree.io/f/mwpjykeg" method="POST">
+            <section>
+                <h3>Datos del vehículo</h3>
+                <label for="marca">Marca*</label>
+                <input type="text" id="marca" name="marca" required>
+
+                <label for="modelo">Modelo*</label>
+                <input type="text" id="modelo" name="modelo" required>
+
+                <label for="ano">Año*</label>
+                <input type="number" id="ano" name="ano" min="1900" max="2100" required>
+
+                <label for="combustible">Combustible*</label>
+                <select id="combustible" name="combustible" required>
+                    <option value="">Selecciona</option>
+                    <option value="gasolina">Gasolina</option>
+                    <option value="diesel">Diésel</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="electrico">Eléctrico</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="tipo">Tipo*</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona</option>
+                    <option value="berlina">Berlina</option>
+                    <option value="compacto">Compacto</option>
+                    <option value="familiar">Familiar</option>
+                    <option value="suv">SUV</option>
+                    <option value="deportivo">Deportivo</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="transmision">Transmisión*</label>
+                <select id="transmision" name="transmision" required>
+                    <option value="">Selecciona</option>
+                    <option value="manual">Manual</option>
+                    <option value="automatica">Automática</option>
+                </select>
+
+                <label for="version">Versión*</label>
+                <input type="text" id="version" name="version" required>
+
+                <label for="km">Kilómetros*</label>
+                <input type="number" id="km" name="km" min="0" required>
+
+                <label for="matricula">Matrícula*</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </section>
+
+            <section>
+                <h3>Tus datos</h3>
+                <label for="nombre">Nombre*</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Teléfono*</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+
+                <label for="email">Correo electrónico*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="provincia">Provincia*</label>
+                <input type="text" id="provincia" name="provincia" required>
+
+                <label for="localidad">Localidad*</label>
+                <input type="text" id="localidad" name="localidad" required>
+
+                <label for="cp">Código postal*</label>
+                <input type="text" id="cp" name="cp" pattern="[0-9]{5}" required>
+            </section>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 vendervehiculo.es &ndash; Todos los derechos reservados</p>
+        <p>Aviso legal | Política de privacidad</p>
+    </footer>
+</body>
+</html>
