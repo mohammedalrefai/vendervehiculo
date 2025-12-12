@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Vender Vehículo - vendervehiculo.es</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Formulario online para vender tu coche de forma rápida y sencilla. Rellena los datos y recibe una valoración.">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f3f3f3;}
-        header, footer { background: #222; color: #fff; padding: 20px; text-align: center;}
-        main { max-width: 600px; margin: 30px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px #ccc; border-radius: 8px;}
-        form section { margin-bottom: 25px;}
-        label { display: block; margin: 10px 0 6px; }
-        input, select { width: 100%; padding: 8px; box-sizing: border-box;}
-        button { background: #218838; color: #fff; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; margin-top: 10px;}
-        button:hover { background: #17632f;}
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header>
-        <h1>vendervehiculo.es</h1>
-        <p>Vende tu coche fácil, rápido y seguro</p>
+<body class="bg-gray-100 font-sans">
+    <header class="border-b-4 border-teal-green bg-green-950 text-white text-center p-6">
+        <h1 class="text-teal-green text-3xl lg:text-[42px] font-bold leading-14">vendervehiculo.es</h1>
+        <p class="text-[#D2B64F] font-medium text-lg">Vende tu coche fácil, rápido y seguro</p>
     </header>
 
-    <main>
-        <h2>Formulario para vender tu vehículo</h2>
-        <form action="https://formspree.io/f/mwpjykeg" method="POST">
+    <main class="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-xl rounded-2xl">
+        <h2 class="text-teal-green text-3xl lg:text-[42px] font-bold leading-12 mb-10">Formulario para vender tu vehículo</h2>
+
+        <form action="https://formspree.io/f/mwpjykeg" method="POST" class="space-y-10">
             <section>
-                <h3>Datos del vehículo</h3>
-                <label for="marca">Marca*</label>
-                <input type="text" id="marca" name="marca" required>
+                <h3 class="text-[#D2B64F] text-2xl font-bold leading-6 mb-4">Datos del vehículo</h3>
 
-                <label for="modelo">Modelo*</label>
-                <input type="text" id="modelo" name="modelo" required>
+                <label class="font-medium" for="marca">Marca*</label>
+                <select id="marca" name="marca" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value="355">ABARTH</option>
+                    <option value="53">AIXAM</option>
+                    <option value="54">ALFA ROMEO</option>
+                    <option value="212">ASTON MARTIN</option>
+                    <option value="55">AUDI</option>
+                    <option value="218">BENTLEY</option>
+                    <option value="57">BMW</option>
+                    <option value="349">BYD</option>
+                    <option value="166">CADILLAC</option>
+                    <option value="60">CHEVROLET</option>
+                    <option value="58">CHRYSLER</option>
+                    <option value="59">CITROEN</option>
+                    <option value="764">CUPRA</option>
+                    <option value="231">DACIA</option>
+                    <option value="241">DODGE</option>
+                    <option value="619">DS AUTOMOBILES</option>
+                    <option value="62">FERRARI</option>
+                    <option value="63">FIAT</option>
+                    <option value="64">FORD</option>
+                    <option value="66">HONDA</option>
+                    <option value="174">HUMMER</option>
+                    <option value="67">HYUNDAI</option>
+                    <option value="263">INFINITI</option>
+                    <option value="69">JAGUAR</option>
+                    <option value="95">JEEP</option>
+                    <option value="162">KIA</option>
+                    <option value="269">LAMBORGHINI</option>
+                    <option value="71">LANCIA</option>
+                    <option value="72">LAND ROVER</option>
+                    <option value="164">LEXUS</option>
+                    <option value="272">LOTUS</option>
+                    <option value="805">LYNK CO</option>
+                    <option value="74">MASERATI</option>
+                    <option value="75">MAZDA</option>
+                    <option value="555">MCLAREN</option>
+                    <option value="76">MERCEDES</option>
+                    <option value="77">MG</option>
+                    <option value="327">MICROCAR</option>
+                    <option value="167">MINI</option>
+                    <option value="79">MITSUBISHI</option>
+                    <option value="80">NISSAN</option>
+                    <option value="880">OMODA</option>
+                    <option value="81">OPEL</option>
+                    <option value="82">PEUGEOT</option>
+                    <option value="292">PIAGGIO</option>
+                    <option value="83">PORSCHE</option>
+                    <option value="84">RENAULT</option>
+                    <option value="170">ROVER</option>
+                    <option value="85">SAAB</option>
+                    <option value="303">SANTANA</option>
+                    <option value="86">SEAT</option>
+                    <option value="88">SKODA</option>
+                    <option value="163">SMART</option>
+                    <option value="175">SSANGYONG</option>
+                    <option value="89">SUBARU</option>
+                    <option value="90">SUZUKI</option>
+                    <option value="336">TATA</option>
+                    <option value="368">TESLA</option>
+                    <option value="91">TOYOTA</option>
+                    <option value="92">VOLKSWAGEN</option>
+                    <option value="94">VOLVO</option>
+                </select>
 
-                <label for="ano">Año*</label>
-                <input type="number" id="ano" name="ano" min="1900" max="2100" required>
+                <label class="font-medium" for="modelo">Modelo*</label>
+                <input type="text" id="modelo" name="modelo" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
-                <label for="combustible">Combustible*</label>
-                <select id="combustible" name="combustible" required>
-                    <option value="">Selecciona</option>
+                <label class="font-medium" for="ano">Año*</label>
+                <input type="number" id="ano" name="ano" min="1900" max="2100" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
+
+                <label class="font-medium" for="combustible">Combustible*</label>
+                <select id="combustible" name="combustible" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
+                    <option value=""></option>
                     <option value="gasolina">Gasolina</option>
                     <option value="diesel">Diésel</option>
                     <option value="hibrido">Híbrido</option>
@@ -46,9 +103,9 @@
                     <option value="otro">Otro</option>
                 </select>
 
-                <label for="tipo">Tipo*</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="">Selecciona</option>
+                <label class="font-medium" for="tipo">Tipo*</label>
+                <select id="tipo" name="tipo" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
+                    <option value=""></option>
                     <option value="berlina">Berlina</option>
                     <option value="compacto">Compacto</option>
                     <option value="familiar">Familiar</option>
@@ -57,51 +114,142 @@
                     <option value="otro">Otro</option>
                 </select>
 
-                <label for="transmision">Transmisión*</label>
-                <select id="transmision" name="transmision" required>
-                    <option value="">Selecciona</option>
+                <label class="font-medium" for="transmision">Transmisión*</label>
+                <select id="transmision" name="transmision" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
+                    <option value=""></option>
                     <option value="manual">Manual</option>
-                    <option value="automatica">Automática</option>
+                    <option value="automatica">Automático</option>
                 </select>
 
-                <label for="version">Versión*</label>
-                <input type="text" id="version" name="version" required>
+                <label class="font-medium" for="version">Versión</label>
+                <input type="text" id="version" name="version" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
-                <label for="km">Kilómetros*</label>
-                <input type="number" id="km" name="km" min="0" required>
+                <label class="font-medium" for="km">Kilómetros*</label>
+                <select id="km" name="km" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
+                    <option value=""></option>
+                    <option value=""></option>
+                  <option value="9999">Menos de 10.000 km</option>
+                  <option value="10000">10.000 km</option>
+                  <option value="20000">20.000 km</option>
+                  <option value="30000">30.000 km</option>
+                  <option value="40000">40.000 km</option>
+                  <option value="50000">50.000 km</option>
+                  <option value="60000">60.000 km</option>
+                  <option value="70000">70.000 km</option>
+                  <option value="80000">80.000 km</option>
+                  <option value="90000">90.000 km</option>
+                  <option value="100000">100.000 km</option>
+                  <option value="110000">110.000 km</option>
+                  <option value="120000">120.000 km</option>
+                  <option value="130000">130.000 km</option>
+                  <option value="140000">140.000 km</option>
+                  <option value="150000">150.000 km</option>
+                  <option value="160000">160.000 km</option>
+                  <option value="170000">170.000 km</option>
+                  <option value="180000">180.000 km</option>
+                  <option value="190000">190.000 km</option>
+                  <option value="200000">200.000 km</option>
+                  <option value="210000">210.000 km</option>
+                  <option value="220000">220.000 km</option>
+                  <option value="230000">230.000 km</option>
+                  <option value="240000">240.000 km</option>
+                  <option value="250000">250.000 km</option>
+                  <option value="260000">260.000 km</option>
+                  <option value="270000">270.000 km</option>
+                  <option value="280000">280.000 km</option>
+                  <option value="290000">290.000 km</option>
+                  <option value="300000">300.000 km</option>
+                  <option value="310000">310.000 km</option>
+                  <option value="320000">320.000 km</option>
+                  <option value="330000">330.000 km</option>
+                  <option value="340000">340.000 km</option>
+                  <option value="350000">350.000 km</option>
+                  <option value="360000">360.000 km</option>
+                  <option value="370000">370.000 km</option>
+                  <option value="380000">380.000 km</option>
+                  <option value="390000">390.000 km</option>
+                  <option value="400000">400.000 km</option>
+                  <option value="410000">410.000 km</option>
+                  <option value="420000">420.000 km</option>
+                  <option value="430000">430.000 km</option>
+                  <option value="440000">440.000 km</option>
+                  <option value="450000">450.000 km</option>
+                  <option value="460000">460.000 km</option>
+                  <option value="470000">470.000 km</option>
+                  <option value="480000">480.000 km</option>
+                  <option value="490000">490.000 km</option>
+                  <option value="500000">500.000 km</option>
+                  <option value="500001">Más de 500.000 km</option>
+                </select>
 
-                <label for="matricula">Matrícula*</label>
-                <input type="text" id="matricula" name="matricula" required>
+                <label class="font-medium" for="matricula">Matrícula*</label>
+                <input type="text" id="matricula" name="matricula" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
             </section>
 
             <section>
-                <h3>Tus datos</h3>
-                <label for="nombre">Nombre*</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <h3 class="text-[#D2B64F] text-2xl font-bold leading-6 mb-4">Tus datos</h3>
 
-                <label for="telefono">Teléfono*</label>
-                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+                <label class="font-medium" for="nombre">Nombre*</label>
+                <input type="text" id="nombre" name="nombre" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
-                <label for="email">Correo electrónico*</label>
-                <input type="email" id="email" name="email" required>
+                <label class="font-medium" for="telefono">Teléfono*</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
-                <label for="provincia">Provincia*</label>
-                <input type="text" id="provincia" name="provincia" required>
+                <label class="font-medium" for="email">Correo electrónico*</label>
+                <input type="email" id="email" name="email" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
-                <label for="localidad">Localidad*</label>
-                <input type="text" id="localidad" name="localidad" required>
+                <label class="font-medium" for="provincia">Provincia*</label>
+                <input type="text" id="provincia" name="provincia" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
-                <label for="cp">Código postal*</label>
-                <input type="text" id="cp" name="cp" pattern="[0-9]{5}" required>
+                <label class="font-medium" for="localidad">Localidad*</label>
+                <input type="text" id="localidad" name="localidad" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
+
+                <label class="font-medium" for="cp">Código postal*</label>
+                <input type="text" id="cp" name="cp" pattern="[0-9]{5}" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
             </section>
 
-            <button type="submit">Enviar</button>
+            <section>
+                <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                <label for="checked-checkbox" class="select-none ms-2 text-sm font-medium text-heading">He leído y acepto las <a href="./politica.html"></a>política de protección de datos.</label>
+            </section>
+
+            <button type="submit" class="bg-green-950 text-white px-6 py-3 rounded-[25px] font-bold w-full cursor-pointer">Enviar</button>
         </form>
     </main>
 
-    <footer>
-        <p>&copy; 2025 vendervehiculo.es &ndash; Todos los derechos reservados</p>
-        <p>Aviso legal | Política de privacidad</p>
+    <footer class="border-t-4 border-teal-green bg-green-950 text-white text-center p-6 mt-10">
+        <p>&copy; 2025 vendervehiculo.es – Todos los derechos reservados</p>
+        <p><a href="./aviso.html">Aviso legal</a> | <a href="./politica.html">Política de privacidad</a></p>
     </footer>
+    <script>
+        // Preserve form data after refresh and errors
+        const form = document.querySelector('form');
+        const fields = form.querySelectorAll('input, select');
+
+        // Load saved values
+        fields.forEach(field => {
+            const saved = localStorage.getItem(field.id);
+            if (saved) field.value = saved;
+        });
+
+        // Save on input or change
+        fields.forEach(field => {
+            ['input', 'change'].forEach(evt => {
+                field.addEventListener(evt, () => {
+                    localStorage.setItem(field.id, field.value);
+                });
+            });
+        });(field => {
+            const saved = localStorage.getItem(field.name);
+            if (saved) field.value = saved;
+        });
+
+        // Save on change
+        fields.forEach(field => {
+            field.addEventListener('change', () => {
+                localStorage.setItem(field.name, field.value);
+            });
+        });
+    </script>
 </body>
 </html>
