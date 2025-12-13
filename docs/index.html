@@ -8,14 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <script>
-const form = document.getElementById('vehicleForm');
+const vehicleForm = document.getElementById('vehicleForm');
 
-form.addEventListener('submit', async function (e) {
+vehicleForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: new FormData(form),
+  const response = await fetch(vehicleForm.action, {
+    method: vehicleForm.method,
+    body: new FormData(vehicleForm),
     headers: { 'Accept': 'application/json' }
   });
 
@@ -40,7 +40,6 @@ form.addEventListener('submit', async function (e) {
         <h2 class="text-teal-green text-3xl lg:text-[42px] font-bold leading-12 mb-10">Formulario para vender tu vehículo</h2>
 
         <form action="https://formspree.io/f/mwpjykeg" method="POST" id="vehicleForm" class="space-y-10">
-            <input type="hidden" name="_redirect" value="https://www.vendervehiculo.es/gracias.html">
             <section>
                 <h3 class="text-[#D2B64F] text-2xl font-bold leading-6 mb-4">Datos del vehículo</h3>
 
