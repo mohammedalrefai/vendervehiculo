@@ -9,7 +9,7 @@
 </head>
 <body class="bg-gray-100 font-sans">
     <header class="border-b-4 border-teal-green bg-green-950 text-white text-center p-6">
-        <h1 class="text-teal-green text-3xl lg:text-[42px] font-bold leading-14">vendervehiculo.es</h1>
+        <a href="https://www.vendervehiculo.es/"><h1 class="text-teal-green text-3xl lg:text-[42px] font-bold leading-14">vendervehiculo.es</h1></a>
         <p class="text-[#D2B64F] font-medium text-lg">Vende tu coche fácil, rápido y seguro</p>
     </header>
 
@@ -17,6 +17,7 @@
         <h2 class="text-teal-green text-3xl lg:text-[42px] font-bold leading-12 mb-10">Formulario para vender tu vehículo</h2>
 
         <form action="https://formspree.io/f/mwpjykeg" method="POST" class="space-y-10">
+            <input type="hidden" name="_redirect" value="https://www.vendervehiculo.es/gracias.html">
             <section>
                 <h3 class="text-[#D2B64F] text-2xl font-bold leading-6 mb-4">Datos del vehículo</h3>
 
@@ -103,8 +104,8 @@
                     <option value="otro">Otro</option>
                 </select>
 
-                <label class="font-medium" for="tipo">Tipo*</label>
-                <select id="tipo" name="tipo" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
+                <label class="font-medium" for="tipo">Tipo</label>
+                <select id="tipo" name="tipo" class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
                     <option value=""></option>
                     <option value="berlina">Berlina</option>
                     <option value="compacto">Compacto</option>
@@ -120,9 +121,6 @@
                     <option value="manual">Manual</option>
                     <option value="automatica">Automático</option>
                 </select>
-
-                <label class="font-medium" for="version">Versión</label>
-                <input type="text" id="version" name="version" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
 
                 <label class="font-medium" for="km">Kilómetros*</label>
                 <select id="km" name="km" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5">
@@ -182,8 +180,8 @@
                   <option value="500001">Más de 500.000 km</option>
                 </select>
 
-                <label class="font-medium" for="matricula">Matrícula*</label>
-                <input type="text" id="matricula" name="matricula" required class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
+                <label class="font-medium" for="matricula">Matrícula</label>
+                <input type="text" id="matricula" name="matricula" class="w-full p-3 rounded-[25px] border border-gray-300 mb-5" />
             </section>
 
             <section>
